@@ -8,13 +8,6 @@ namespace SceneManagement
         [SerializeField]
         public GameObject loadScene;
 
-        private void OnTriggerEnter2D(Collider2D other)
-        {
-            if (other.CompareTag("Player")) {
-                OnLoadScene();
-            }
-        }
-
         public void OnLoadScene()
         {
             if (loadScene == null) {

@@ -79,5 +79,27 @@ namespace UI
             canvasGroup.gameObject.SetActive (true);
             yield return _instance.StartCoroutine(_instance.Fade(1f, canvasGroup));
         }
+        
+        public static IEnumerator FadeSceneIn (CanvasGroup canvasGroup)
+        {
+            yield return _instance.StartCoroutine(_instance.Fade(0f, canvasGroup));
+            canvasGroup.gameObject.SetActive (false);
+        }
+
+        public static IEnumerator FadeSceneOut (CanvasGroup canvasGroup)
+        {
+            canvasGroup.gameObject.SetActive (true);
+            yield return _instance.StartCoroutine(_instance.Fade(1f, canvasGroup));
+        }
+
+        public void Show(CanvasGroup canvasGroup)
+        {
+            StartCoroutine(FadeSceneOut(canvasGroup));
+        }
+
+        public void Hide(CanvasGroup canvasGroup)
+        {
+            StartCoroutine(FadeSceneIn(canvasGroup));
+        }
     }
 }

@@ -14,9 +14,9 @@ TagManager:
   - 
   - 
   - Platform
-  - 
-  - 
-  - 
+  - Player
+  - Enemy
+  - Destructable
   - 
   - 
   - 
@@ -46,4 +46,13 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 3405422359
+    locked: 0
+  - name: Ground
+    uniqueID: 3581394905
+    locked: 0
+  - name: Enemy
+    uniqueID: 866022089
+    locked: 0
+  - name: Player
+    uniqueID: 2361088491
     locked: 0
